@@ -1,0 +1,28 @@
+### Author: https://www.kaggle.com/code/yacharki/traffic-signs-image-classification-97-cnn
+### Altered by: Victoria Chan
+
+# Fundamental classes
+import numpy as np 
+import pandas as pd 
+import tensorflow as tf
+import os
+
+# Image related
+import cv2
+from PIL import Image
+
+#Performance Plot
+from sklearn import metrics 
+from sklearn.metrics import f1_score, accuracy_score,confusion_matrix,classification_report
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# For the model and it's training
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
+
+# Time
+import time
+import datetime
