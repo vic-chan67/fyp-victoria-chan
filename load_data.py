@@ -1,8 +1,11 @@
+# load_data.py
+# Loads training and testing data from GTSRB dataset
+
 import os
 import numpy as np
 import pandas as pd
 import cv2
-from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical # type: ignore
 
 # Data paths
 train_folder = "data/Train"
