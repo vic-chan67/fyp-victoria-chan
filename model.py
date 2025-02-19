@@ -1,6 +1,9 @@
+# model.py
+# Build CNN model
+
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, MaxPooling2D, Dropout
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, MaxPooling2D, Dropout # type: ignore
 
 def build_model():
 
