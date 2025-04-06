@@ -1,7 +1,9 @@
-data/
+gtsdb-data
+gtsrb-data/
 .DS_Store
 __pycache__/
 models/
 test_figures/
 .venv/
 db/
+cnn-model-plot.png
