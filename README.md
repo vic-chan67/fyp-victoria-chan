@@ -1,6 +1,24 @@
-# FYP Victoria Chan
+# Real-Time Translation of Road Signs
+Victoria Chan's final year project (31012194)
+
+## About
+
+## Directory layout
+`/datasets` - contains all datasets folders  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/cropped-data` - contains images of road signs that have been focused on and cropped from images in from the GTSDB dataset  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/gtsdb-data` - contains raw data downloaded from [source](https://sid.erda.dk/public/archives/ff17dc924eba88d5d01a807357d6614c/published-archive.html)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/gtsdb-yolo` - contains data from '/gtsdb-data' that has been converted for use with YOLOv8  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/gtsrb-data`
 
 
+## Datasets
+Datasets haven't been included due to their large sizes. Download the datasets listed below:
+- [GTSDB (German Traffic Sign Detection Benchmark)](https://sid.erda.dk/public/archives/ff17dc924eba88d5d01a807357d6614c/published-archive.html) - download zip file "FullIJCNN2013.zip" from the corresponding link, this is the full dataset of the GTSDB including training and testing data.
+- [GTSRB (German Traffic Sign Recognition Benchmark)](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign) - download folders "Meta", "Train", "Test", and files "Meta.csv", "Train.csv", "Test.csv"
+
+**Before running the main code, "gtsdb_yolo.py" should be ran to convert the original "gtsdb-data" folder into a format that the detection model can use**
+
+It is recommended to rename the folders and follow the project directory sorting to ensure the program works properly without issues with file/folder paths
 
 ## Getting started
 
