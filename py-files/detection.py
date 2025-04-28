@@ -18,7 +18,7 @@ def detect_signs(image_path):  #take image path as input
         for box in boxes:
             x1, y1, x2, y2 = map(int, box.xyxy[0])  #get bounding box coords
             class_id = int(box.cls[0])  #get class id (sign type)
-            conf = float(box.conf[0])  #get confidence score
+            #confidence = float(box.conf[0])  #get confidence score
             label = DESCRIPTIONS.get(class_id, f"Class {class_id}")  #get label from dictionary
 
             # Draw bounding box and label
