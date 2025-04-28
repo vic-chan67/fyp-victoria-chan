@@ -8,10 +8,10 @@ import cv2
 from tensorflow.keras.utils import to_categorical # type: ignore
 
 # Data paths
-train_folder = "data/Train"
-test_folder = "data/Test"
-train_csv = "data/Train.csv"
-test_csv = "data/Test.csv"
+train_folder = "datasets/gtsrb-data/Train"
+test_folder = "datasets/gtsrb-data/Test"
+train_csv = "datasets/gtsrb-data/Train.csv"
+test_csv = "datasets/gtsrb-data/Test.csv"
 
 # Image size
 img_size = (32, 32)
