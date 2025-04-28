@@ -1,0 +1,48 @@
+names:
+- 20 km/h speed limit
+- 30 km/h speed limit
+- 50 km/h speed limit
+- 60 km/h speed limit
+- 70 km/h speed limit
+- 80 km/h speed limit
+- End of 80 km/h speed limit
+- 100 km/h speed limit
+- 120 km/h speed limit
+- No passing/overtaking for any vehicle type
+- No passing/overtaking for vehicles with a weight over 3.5 tonnes
+- Priority at the upcoming intersection or crossing
+- Priority road start - priority at all upcoming intersections and crossings
+- Yield right-of-way
+- Stop and yield
+- No entry for any vehicle type
+- No entry for vehicles with a weight over 3.5 tonnes
+- Do not enter
+- General danger/warning sign
+- Single curve approaching in the left direction
+- Single curve approaching in the right direction
+- Double curve approaching - first to the left
+- Rough road ahead
+- Danger of skidding or slipping
+- Road narrows from the right side - yield to oncoming traffic
+- Work in process - be aware of workers on the road
+- Traffic signal ahead
+- Pedestrian crossing ahead
+- Pay attention to children
+- Be aware of cyclists
+- Icy road ahead - can be slippery
+- Wild animals may cross the road
+- End of all previously set passing and speed restrictions
+- Must turn right
+- Must turn left
+- Must continue straight ahead - no permitted turns
+- Must continue straight ahead or turn right
+- Must continue straight ahead or turn left
+- Drive from the right of the obstacle
+- Drive from the left of the obstacle
+- Roundabout
+- End of no-passing zone for vehicles under 3.5 tonnes
+- End of all passing restrictions
+nc: 43
+path: gtsdb-yolo
+train: images/train
+val: images/val
