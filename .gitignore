@@ -13,3 +13,4 @@ gen_yaml.py
 gtsdb_yolo.py
 detection-old.py
 node_modules/
+rand_script.py
