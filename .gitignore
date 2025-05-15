@@ -1,16 +1,7 @@
 datasets/
-detect-data/
 .DS_Store
 __pycache__/
-models/
-test_figures/
 .venv/
 db/
-cnn-model-plot.png
-runs/
-yolov8n.pt
-gen_yaml.py
-gtsdb_yolo.py
-detection-old.py
 node_modules/
 rand_script.py
