@@ -16,6 +16,9 @@ No dataset is included in this git repository due to large folder sizes. They sh
 - [GTSRB](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign) - download folders: "Meta", "Train", "Test", files: "Meta.csv", "Train.csv", "Test.csv", place into one folder and rename to "gtsrb-data"
 - [GTSDB](https://sid.erda.dk/public/archives/ff17dc924eba88d5d01a807357d6614c/published-archive.html) - download zip file "FullIJCNN2013.zip" and rename the folder to "gtsdb-data". Before running anything else, run the "gtsdb_yolo.py" file to convert GTSDB to YOLO format. These can be used to test the system due to YOLO not taking images in PPM format.
 
+As well as renaming the folder, both folders should be placed into one folder called "datasets".
+Example: "fyp-victoria-chan/datasets/gtsrb-data/" should contain all the data downloaded from the Kaggle GTSRB dataset
+
 **Dependencies:**
 `pip install requirements.txt`
 
@@ -28,3 +31,23 @@ No dataset is included in this git repository due to large folder sizes. They sh
 
 **On any other OS:**
 - As I do not have access to another device, I have not tested running the program on another device. It is recommended to run the program on a MacOS device that has XCode installed as all coding and testing has been done on MacOS.
+
+## Understanding the directory
+**Key files/folders:**
+- datasets/ - all datasets
+- py-files/ - all python scripts and backend related files
+    - detection-results/ - all results from running "detection.py" are stored here
+    - models/ - contains both the CNN and YOLOv8 models
+    - cropping.py - crops road signs from full scenes
+    - descriptions.py - dictionary mapping each class to a description
+    - full_pipeline.py - when executed, runs the full backend pipeline (input, detection, cropping, classification, translation, output)
+    - gtsdb_yolo.py - converts raw GTSDB data to YOLO format
+    - gtsdb.yaml - used to train YOLOv8 model
+    - lang_codes.md - full list of languages, and their associated language code, that are supported by LibreTranslate
+    - load_data.py - load data from GTSRB to train or test CNN model
+    - main.py - used to connect backend to frontend with Flask API
+    - model.py - define the CNN architecture and compile parameters
+    - testing.py - used to test the CNN model only
+    - training.py - used to train the CNN model
+    - translate.py - translates text into another language
+- road-sign-translator/ - React + Expo mobile application
