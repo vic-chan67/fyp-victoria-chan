@@ -25,7 +25,7 @@ def preprocess(img):
 lang = "fr"
 
 # Load model
-cnn_model = tf.keras.models.load_model("py-files/models/final_model.keras")
+cnn_model = tf.keras.models.load_model("py-files/models/final_cnn.keras")
 
 start_time = time.time()
 

@@ -1,5 +1,5 @@
 # testing.py
-# Test trained CNN model on test data
+# Used to test trained model on test data, not used in main pipeline
 
 import load_data
 import descriptions

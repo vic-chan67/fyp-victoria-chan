@@ -14,7 +14,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-cnn_model = tf.keras.models.load_model("models/final_model.keras")
+cnn_model = tf.keras.models.load_model("models/final_cnn.keras")
 
 # Predict route - accepts POST requests with image and predicts the class
 @app.route("/predict", methods=["POST"])

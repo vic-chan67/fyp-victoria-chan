@@ -2,8 +2,6 @@
 # Crop detected road signs from images to be passed to the CNN model
 
 from ultralytics import YOLO
-# import cv2
-# import os
 
 # Load YOLOv8 model
 model = YOLO("py-files/runs/detect/train4/weights/best.pt")

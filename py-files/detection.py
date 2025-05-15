@@ -3,11 +3,11 @@
 
 from ultralytics import YOLO
 import cv2
-# import os
+import os
 from descriptions import DESCRIPTIONS
 
 # Load YOLOv8 model
-model = YOLO("py-files/runs/detect/train4/weights/best.pt")
+model = YOLO("py-files/models/best_yolo/weights/best.pt")
 
 def detect_signs(image_path):  #take image path as input
     image = cv2.imread(image_path)
@@ -24,16 +24,19 @@ def detect_signs(image_path):  #take image path as input
             bounding_boxes.append((x1, y1, x2, y2, class_id, label))
 
             # Draw bounding box and label
-            # cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            # cv2.putText(image, label, (x1, y1 - 10),
-            #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-    return image, bounding_boxes
+            cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(image, label, (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
-    # # Save output image
-    # out_path = image_path.replace("gtsdb-data", "detect-data").replace(".ppm", "_yolo.jpg")
-    # os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    # cv2.imwrite(out_path, image)
-    # print(f"Output image saved")
+    # Save output image
+    output_dir = "py-files/detection-results"
+    os.makedirs(output_dir, exist_ok=True)
+    base_name = os.path.basename(image_path).replace(".ppm", "_yolo.jpg").replace(".jpg", "_yolo.jpg")
+    out_path = os.path.join(output_dir, base_name)
+    cv2.imwrite(out_path, image)
+    print(f"Output image saved to {out_path}")
+
+    return image, bounding_boxes
 
 if __name__ == "__main__":
     image, bounding_boxes = detect_signs("datasets/gtsdb-yolo/images/val/00090.jpg")
