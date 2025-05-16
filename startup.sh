@@ -11,5 +11,7 @@ cd ..
 
 cd road-sign-translator
 echo "Starting Road Sign Translator App"
-export EXPO_DEVTOOLS_LISTEN_ADDRESS=localhost
-npm run ios -- --localhost
+# export EXPO_DEVTOOLS_LISTEN_ADDRESS=localhost
+# npm run ios -- --localhost
+
+npm run ios
