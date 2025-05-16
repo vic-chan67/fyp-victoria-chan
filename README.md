@@ -4,7 +4,7 @@ Victoria Chan's final year project (31012194)
 ## About
 Real-time translation of road signs project to take in an input image of a full road scene and return a translated description of all detected road signs to the user.
 
-**Notice**: System was coded in the Anaconda environment on a Macbook Pro M1, with 8gb RAM, on MacOS Sequoia (15.4.1). No Windows testing has been done.
+**Notice**: System was coded in the Anaconda environment on a Macbook Pro M1, with 8gb RAM, on MacOS Sequoia (15.4.1). iPhone 16 Pro running iOS 18.3 was the primary mobile application simulator. No Windows testing has been done.
 
 ## Setup
 `git clone` this repository, it is recommended the folder this is cloned into has the same name
