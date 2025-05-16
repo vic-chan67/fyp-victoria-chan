@@ -6,8 +6,12 @@ import cv2
 import os
 from descriptions import DESCRIPTIONS
 
+# Dynamic path for the model
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "best_yolo", "weights", "best.pt")
+
 # Load YOLOv8 model
-model = YOLO("py-files/models/best_yolo/weights/best.pt")
+model = YOLO(MODEL_PATH)
 
 def detect_signs(image_path):  #take image path as input
     image = cv2.imread(image_path)
@@ -31,7 +35,7 @@ def detect_signs(image_path):  #take image path as input
     # Save output image
     output_dir = "py-files/detection-results"
     os.makedirs(output_dir, exist_ok=True)
-    base_name = os.path.basename(image_path).replace(".ppm", "_yolo.jpg").replace(".jpg", "_yolo.jpg")
+    base_name = os.path.basename(image_path).replace(".ppm", ".jpg")
     out_path = os.path.join(output_dir, base_name)
     cv2.imwrite(out_path, image)
     print(f"Output image saved to {out_path}")

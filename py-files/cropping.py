@@ -4,7 +4,7 @@
 from ultralytics import YOLO
 
 # Load YOLOv8 model
-model = YOLO("py-files/runs/detect/train4/weights/best.pt")
+# model = YOLO("py-files/runs/detect/train4/weights/best.pt")
 
 def crop_signs(image, bounding_boxes):
     cropped_signs = []
