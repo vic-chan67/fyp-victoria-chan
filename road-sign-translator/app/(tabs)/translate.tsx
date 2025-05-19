@@ -1,4 +1,4 @@
-// tester.tpx
+// translate.tpx
 // Allows user to upload a road sign image and get a prediction of its meaning
 
 import React, { useState, useEffect } from "react";
@@ -6,7 +6,7 @@ import { View, Text, Button, Image, StyleSheet } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { useLanguage } from "../../context/LanguageContext";
 
-export default function Tester() {
+export default function Translate() {
   const [image, setImage] = useState<string | null>(null);
   const [prediction, setPrediction] = useState<string | null>(null);
   const { language } = useLanguage();
