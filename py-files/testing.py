@@ -18,7 +18,7 @@ X_test, y_test = shuffle(X_test, y_test, random_state=None)
 
 # Load trained model
 print("\n---------- Loading trained model ----------")
-cnn_model = tf.keras.models.load_model("py-files/models/final_model.keras")
+cnn_model = tf.keras.models.load_model("py-files/models/final_cnn.keras")
 
 # Make predictions
 print("\n---------- Making predictions ----------\n")

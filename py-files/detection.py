@@ -43,5 +43,5 @@ def detect_signs(image_path):  #take image path as input
     return image, bounding_boxes
 
 if __name__ == "__main__":
-    image, bounding_boxes = detect_signs("datasets/gtsdb-yolo/images/val/00090.jpg")
+    image, bounding_boxes = detect_signs("datasets/gtsdb-yolo/images/val/00788.jpg")
     print(f"Detected {len(bounding_boxes)} signs")
